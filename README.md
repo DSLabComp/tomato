@@ -6,6 +6,9 @@
 `/output/v1.ipynb` \
 [Tensorflow 이미지 분류](https://www.tensorflow.org/tutorials/images/classification?hl=ko) 를 그대로 따라한 코드
 
+- **추가 예정**
 1. Epochs 더 늘려보고 Callback 추가 예정
 2. [전이학습 및 미세조정](https://www.tensorflow.org/tutorials/images/transfer_learning?hl=ko) 참고하여 보완 \
 추가: [Image classification via fine-tuning with EfficientNet](https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/)
+3. `img_height`, `img_width` 크게 해보기
+
