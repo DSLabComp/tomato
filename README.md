@@ -3,7 +3,7 @@
 
 
 # v1: 0.8946 (21. 10. 6. 03:45)
-`/src/v1.ipynb` \
+`/output/v1.ipynb` \
 [Tensorflow 이미지 분류](https://www.tensorflow.org/tutorials/images/classification?hl=ko) 를 그대로 따라한 코드
 
 1. Epochs 더 늘려보고 Callback 추가 예정
