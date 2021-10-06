@@ -12,3 +12,10 @@
 추가: [Image classification via fine-tuning with EfficientNet](https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/)
 3. `img_height`, `img_width` 크게 해보기
 
+
+# v1-3:  (21. 10. 6. 09:56)
+`/output/v1-3.ipynb` \
+전이학습 적용
+
+- **추가 예정**
+1. 미세조정(fine-tuning) 예정
