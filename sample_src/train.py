@@ -165,7 +165,3 @@ if __name__ == '__main__':
             performance_recorder.save_weight()
             print(f'{epoch_index} model saved')
             print('----------------------------------')
-
-
-        
-

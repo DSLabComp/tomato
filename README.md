@@ -15,7 +15,16 @@
 
 # v1-3: 0.8985 (21. 10. 6. 09:56)
 `/output/v1-3.ipynb` \
-전이학습 적용
+전이학습(`MobileNetV2`) 적용
+
+- **추가 예정**
+1. 미세조정(fine-tuning) 예정
+
+
+# v1-4: 0.9545 (21. 10. 7. 14:39)
+`/output/v1-4.ipynb` \
+전이학습(`EfficientNetB5`) 적용 \
+Epoch: 100
 
 - **추가 예정**
 1. 미세조정(fine-tuning) 예정

@@ -66,32 +66,32 @@ class Trainer():
         print(msg)
         #self.logger.info(msg) if self.logger else print(msg)
 
-    def validate_epoch(self, dataloader, epoch_index, mode=None):
-        """ 한 epoch에서 수행되는 검증 절차
-
-        Args:
-            dataloader (`dataloader`)
-            epoch_index (int)
-        """
-        self.model.eval()
-        val_total_loss = 0
-        target_lst = []
-        pred_lst = []
-        prob_lst = []
-        with torch.no_grad():
-            for batch_index, (img, label) in enumerate(dataloader):
-                img = img.to(self.device)
-                label = label.to(self.device).long()
-                pred = self.model(img)
-                loss = self.criterion(pred, label)
-                val_total_loss += loss.item()
-                prob_lst.extend(pred[:, 1].cpu().tolist())
-                target_lst.extend(label.cpu().tolist())
-                pred_lst.extend(pred.argmax(dim=1).cpu().tolist())
-            self.val_mean_loss = val_total_loss / batch_index
-            self.validation_score = self.metric_fn(y_pred=pred_lst, y_answer=target_lst, y_prob=prob_lst)
-            msg = f'Epoch {epoch_index}, {mode} loss: {self.val_mean_loss}, Acc: {self.validation_score}'
-            print(msg)
-        #self.logger.info(msg) if self.logger else print(msg)
+    # def validate_epoch(self, dataloader, epoch_index, mode=None):
+    #     """ 한 epoch에서 수행되는 검증 절차
+    #
+    #     Args:
+    #         dataloader (`dataloader`)
+    #         epoch_index (int)
+    #     """
+    #     self.model.eval()
+    #     val_total_loss = 0
+    #     target_lst = []
+    #     pred_lst = []
+    #     prob_lst = []
+    #     with torch.no_grad():
+    #         for batch_index, (img, label) in enumerate(dataloader):
+    #             img = img.to(self.device)
+    #             label = label.to(self.device).long()
+    #             pred = self.model(img)
+    #             loss = self.criterion(pred, label)
+    #             val_total_loss += loss.item()
+    #             prob_lst.extend(pred[:, 1].cpu().tolist())
+    #             target_lst.extend(label.cpu().tolist())
+    #             pred_lst.extend(pred.argmax(dim=1).cpu().tolist())
+    #         self.val_mean_loss = val_total_loss / batch_index
+    #         self.validation_score = self.metric_fn(y_pred=pred_lst, y_answer=target_lst, y_prob=prob_lst)
+    #         msg = f'Epoch {epoch_index}, {mode} loss: {self.val_mean_loss}, Acc: {self.validation_score}'
+    #         print(msg)
+    #     #self.logger.info(msg) if self.logger else print(msg)
 
 
